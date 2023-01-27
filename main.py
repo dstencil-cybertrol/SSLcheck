@@ -24,8 +24,8 @@ SMTP_TO = os.environ['SMTP_TO']
 # Create the email message
 message = MIMEMultipart("related")
 message["Subject"] = "SSL Certificate Expiry for Domains"
-message["From"] = from_email
-message["To"] = to_email
+message["From"] = SMTP_FROM
+message["To"] = SMTP_TO
 
 
 # Create the HTML table
