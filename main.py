@@ -4,18 +4,21 @@ from datetime import datetime
 import OpenSSL
 import ssl
 import smtplib
+from dotenv import load_dotenv
+
+load_dotenv() 
+
 
 # Read list of domains from a .txt file
 with open("domains.txt", "r") as file:
-    domains = file.readlines()
-
-# SMTP server details
-smtp_server = "smtp.example.com"
-smtp_port = 587
-smtp_username = "email@example.com"
-smtp_password = "password"
-from_email = "email@example.com"
-to_email = "email@example.com"
+    domains = file.readlines() 
+    
+SMTP_SERVER = os.environ['SMTP_SERVER']
+SMTP_PORT = os.environ['SMTP_PORT']
+SMTP_USERNAME = os.environ['SMTP_USERNAME']
+SMTP_PASSWORD = os.environ['SMTP_PASSWORD']
+SMTP_FROM = os.environ['SMTP_FROM']
+SMTP_TO = os.environ['SMTP_TO']
 
 
 # Create the email message
