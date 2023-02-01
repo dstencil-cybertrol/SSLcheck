@@ -10,7 +10,7 @@ load_dotenv()
 
 
 # Read list of domains from a .txt file
-with open("domains.txt", "r") as file:
+with open("app/domains.txt", "r") as file:
     domains = file.readlines() 
     
 SMTP_SERVER = os.environ['SMTP_SERVER']
