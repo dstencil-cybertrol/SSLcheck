@@ -1,0 +1,4 @@
+sample.example.com
+example.com
+another.example.com
+sample.com
