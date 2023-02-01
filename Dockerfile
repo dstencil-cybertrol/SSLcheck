@@ -7,7 +7,7 @@ COPY main.py /app/
 
 # Install required packages
 RUN apk add --no-cache openssl openssl-dev
-RUN pip install pyOpenSSL dotenv
+RUN pip install pyOpenSSL python-dotenv
 
 # Set the working directory
 WORKDIR /app
