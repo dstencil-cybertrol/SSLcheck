@@ -5,7 +5,7 @@ FROM python:3.11-alpine
 # Copy the script into the container
 COPY main.py /app/
 COPY domains.txt /app/
-COPY smtp.env /app/
+COPY sample.env /app/
 
 # Install required packages
 RUN apk add --no-cache openssl openssl-dev
