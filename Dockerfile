@@ -8,7 +8,7 @@ COPY domains.txt /app/
 COPY sample.env /app/
 
 # Install required packages
-RUN apt-get update && apt-get install openssl openssl-dev
+RUN apt-get update && apt-get install -y openssl
 RUN pip install pyOpenSSL python-dotenv
 
 # Set the working directory
